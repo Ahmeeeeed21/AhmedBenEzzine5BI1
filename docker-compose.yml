@@ -1,0 +1,32 @@
+version: '2'
+services:
+  achat:
+    build: .
+  environment:
+    SPRING_APPLICATION_JSON: '{
+      "spring.datasource.url"  : "jdbc:mysql://localhost:3306/achatdb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+      "spring.datasource.username" : "root",
+      "spring.datasource.password" : "root",
+      "spring.jpa.properties.hibernate.dialect" : "org.hibernate.dialect.MySQL5InnoDBDialect",
+      "spring.jpa.hibernate.ddl-auto" : "update"
+    }'
+  network:
+    achat:
+  database:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'achatdb'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+    network:
+      achat:
+
+networks:
+  achat:
+
+volumes:
+  db:
