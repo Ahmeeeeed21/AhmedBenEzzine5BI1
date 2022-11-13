@@ -1,7 +1,7 @@
 version: "2"
 services:
   achat:
-    image: "ezzine/achat"
+    image: "ezzine/achat:1.0"
     environment:
       SPRING_APPLICATION_JSON: '{
         "server.servlet.context-path": "/SpringMVC",
