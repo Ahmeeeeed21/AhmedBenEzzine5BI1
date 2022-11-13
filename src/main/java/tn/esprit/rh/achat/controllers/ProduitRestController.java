@@ -41,7 +41,6 @@ public class ProduitRestController {
 		Produit produit = produitService.addProduit(p);
 		return produit;
 	}
-	//test
 
 	// http://localhost:8089/SpringMVC/produit/remove-produit/{produit-id}
 	@DeleteMapping("/remove-produit/{produit-id}")
