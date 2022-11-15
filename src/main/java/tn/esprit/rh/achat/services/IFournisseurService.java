@@ -5,7 +5,7 @@ import tn.esprit.rh.achat.entities.Fournisseur;
 import java.util.List;
 
 public interface IFournisseurService {
-
+//CommentaireXYZ
 	List<Fournisseur> retrieveAllFournisseurs();
 
 	Fournisseur addFournisseur(Fournisseur f);
