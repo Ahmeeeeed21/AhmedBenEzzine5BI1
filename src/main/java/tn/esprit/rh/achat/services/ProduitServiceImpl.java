@@ -38,7 +38,6 @@ public class ProduitServiceImpl implements IProduitService {
 		return p;
 	}
 
-//Ahmed Ben Ezzine
 	
 	@Override
 	public void deleteProduit(Long produitId) {
