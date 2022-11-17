@@ -26,7 +26,6 @@
 	@ExtendWith(MockitoExtension.class)
 	public class ProduitServiceImplTest {
 	
-//Ahmed Ben Ezzine
 		
 		@Mock
 		ProduitRepository produitRepository;
